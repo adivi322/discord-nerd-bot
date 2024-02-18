@@ -27,6 +27,8 @@ async def on_message(message):
         return
     
     await message.channel.send(f"\"{message.content}\" 🤓")
+    emoji = '\N{Nerd Face}'
+    await message.add_reaction(emoji)
     
     
 
