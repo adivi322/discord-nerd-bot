@@ -23,10 +23,11 @@ async def on_message(message):
         return
     if (message.channel.id != CHANNEL_ID):
         return
-    if (message.author != "wusbuz_8"):
+    if (message.author.id != 661673454180892673):
         return
     
     await message.channel.send(f"\"{message.content}\" 🤓")
+    
     
 
 bot.run(BOT_TOKEN)
