@@ -19,10 +19,12 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
-    if message.author == bot.user:
+    if (message.author == bot.user):
+        return
+    if (message.channel.id != CHANNEL_ID):
         return
     
     await message.channel.send(f'\"{message.content}\" 🤓')
-
+    
 
 bot.run(BOT_TOKEN)
